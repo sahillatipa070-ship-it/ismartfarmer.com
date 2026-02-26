@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iSmart Farmer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body>
+<header>
+
+    <h1>🌾 iSmart Farmer</h1>
+    <p>AI Powered Smart Agriculture Platform</p>
+</header>
+<select id="languageSelect" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="hi">हिन्दी</option>
+    <option value="mr">मराठी</option>
+</select>
+
+<section class="login-section">
+    <h2>🔐 Smart Login</h2>
+    <input type="text" id="mobile" placeholder="Mobile Number">
+    <input type="email" id="email" placeholder="Email">
+    <button onclick="sendOTP()">Send OTP</button>
+
+    <div id="otpSection" style="display:none;">
+        <input type="text" id="otp" placeholder="Enter OTP">
+        <button onclick="verifyOTP()">Verify & Login</button>
+    </div>
+</section>
+
+<section class="dashboard" id="dashboard" style="display:none;">
+    <h2>📊 Smart Farmer Dashboard</h2>
+
+    <div class="card-container">
+        <div class="card" onclick="openCropScanner()">🌾 Crop Scanner</div>
+        <div class="card" onclick="getWeather()">🌦 Weather</div>
+        <div class="card" onclick="getMandi()">📈 Mandi Price</div>
+        <div class="card" onclick="askAI()">🧠 AI Assistant</div>
+        <div class="card" onclick="animalDoctors()">🐄 Animal Doctors</div>
+        <div class="card" onclick="governmentSchemes()">🏛 Govt Schemes</div>
+        <div class="card" onclick="profitCalculator()">💰 Profit Calculator</div>
+        <div class="card" onclick="cropRecommendation()">🌱 Crop Suggestion</div>
+
+        <!-- ✅ NEW FEATURES -->
+        <div class="card" onclick="cropBusinessIdeas()">🏭 Crop Business Ideas</div>
+        <div class="card" onclick="animalBusinessIdeas()">🐓 Animal Business Ideas</div>
+
+
+    </div>
+
+    <div id="output"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
