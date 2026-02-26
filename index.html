@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <title>iSmart Farmer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<body>
-<header>
+<!-- 🌅 Sky & Sun -->
+<div class="sky">
+    <div class="sun"></div>
+</div>
 
+<!-- 🐦 Birds -->
+<div class="birds">
+    <div class="bird"></div>
+    <div class="bird delay1"></div>
+    <div class="bird delay2"></div>
+</div>
+
+<!-- 🌾 Crop Field -->
+<div class="field" id="field"></div>
+<body>
+
+<header>
     <h1>🌾 iSmart Farmer</h1>
     <p>AI Powered Smart Agriculture Platform</p>
 </header>
+
 <select id="languageSelect" onchange="changeLanguage()">
     <option value="en">English</option>
     <option value="hi">हिन्दी</option>
     <option value="mr">मराठी</option>
 </select>
 
+<!-- 🔐 LOGIN SECTION -->
 <section class="login-section">
     <h2>🔐 Smart Login</h2>
     <input type="text" id="mobile" placeholder="Mobile Number">
@@ -30,6 +46,7 @@
     </div>
 </section>
 
+<!-- 📊 DASHBOARD (VISIBLE AFTER LOGIN) -->
 <section class="dashboard" id="dashboard" style="display:none;">
     <h2>📊 Smart Farmer Dashboard</h2>
 
@@ -42,51 +59,47 @@
         <div class="card" onclick="governmentSchemes()">🏛 Govt Schemes</div>
         <div class="card" onclick="profitCalculator()">💰 Profit Calculator</div>
         <div class="card" onclick="cropRecommendation()">🌱 Crop Suggestion</div>
-
-        <!-- ✅ NEW FEATURES -->
         <div class="card" onclick="cropBusinessIdeas()">🏭 Crop Business Ideas</div>
         <div class="card" onclick="animalBusinessIdeas()">🐓 Animal Business Ideas</div>
-
-
     </div>
 
     <div id="output"></div>
+
+    <!-- ✅ INFORMATION SECTION (NOW INSIDE DASHBOARD) -->
+    <section class="info-section">
+
+        <div class="info-box">
+            <h3>🌾 About iSmart Farmer</h3>
+            <p>
+                iSmart Farmer is an AI-powered smart agriculture platform 
+                designed to help farmers make better decisions using 
+                crop analysis, weather updates, mandi prices, and profit tools.
+            </p>
+        </div>
+
+        <div class="info-box">
+            <h3>🎯 Our Mission</h3>
+            <p>
+                our mission is to transform traditional farming into smart, data-powered agriculure
+            </p>
+        </div>
+
+        <div class="info-box">
+            <h3>📞 Contact Information</h3>
+            <p>Email: ismartfarmer070@gmail.com</p>
+            <p>Helpline: 9270144114</p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER INSIDE DASHBOARD -->
+    <footer>
+        <p>© 2026 iSmart Farmer | Built for Smart Agriculture 🚜</p>
+    </footer>
+
 </section>
 
 <script src="script.js"></script>
-    <!-- INFORMATION SECTION -->
-<section class="info-section">
 
-    <div class="info-box">
-        <h3>🌾 About iSmart Farmer</h3>
-        <p>
-            iSmart Farmer is an AI-powered smart agriculture platform 
-            designed to help farmers make better decisions using 
-            crop analysis, weather updates, mandi prices, and profit tools.
-        </p>
-    </div>
-
-    <div class="info-box">
-        <h3>🎯 Our Mission</h3>
-        <p>
-            Our mission is to make every farmer data-driven and tech-enabled 
-            by providing easy access to smart farming tools.
-        </p>
-    </div>
-
-    <div class="info-box">
-        <h3>📞 Contact Information</h3>
-        <p>Email: ismartfarmer070@gmail.com</p>
-        <p>Helpline: 9270144114</p>
-    </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2026 iSmart Farmer | Built for Smart Agriculture 🚜</p>
-</footer>
 </body>
-
 </html>
-
